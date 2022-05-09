@@ -6,8 +6,8 @@ public class WatchRepository {
 	static List<ClientDTO> clientList = new ArrayList<>();
 	static List<WatchDTO> watchtList = new ArrayList<>();
 
-	String[] movieArray1 = { "새벽의 저주", "반도", "레지던트 이블", "랜드 오브 데드", "좀비랜드", "부산행", "월드워Z", "28일 후", "..." };
-	String[] dramaArray1 = { "지금 우리 학교는", "좀비탐정", "블랙썸머", "산타 클라리타 다이어트", "킹덤", "워킹데드", "..." };
+	String[] movieArray1 = { "새벽의 저주", "반도", "레지던트 이블", "랜드 오브 데드", "좀비랜드", "..." };
+	String[] dramaArray1 = { "지금 우리 학교는", "좀비탐정", "블랙썸머", "산타 클라리타 다이어트", "..." };
 
 	public boolean checkClientId(String clientId) {
 		boolean checkResult = false;

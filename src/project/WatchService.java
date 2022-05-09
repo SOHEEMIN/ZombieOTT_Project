@@ -137,7 +137,7 @@ public class WatchService {
 		List<WatchDTO> watchingList = wr.watchList(cliendId);
 		while (run && checkClientId(cliendId)) {
 			System.out.println("--------------------------------------------------------");
-			System.out.println("1. 영화 시청내역 | 2. 드라마 시청내역 | *0번: 처음으로 돌아가기");
+			System.out.println("1. 영화 시청내역 | 2. 드라마 시청내역 | *0번: 처음으로 돌아가기| 3번 전체조회");
 			System.out.println("--------------------------------------------------------");
 			System.out.println("선택>");
 			selectNumber = scan.nextInt();
@@ -153,7 +153,15 @@ public class WatchService {
 						System.out.println(w.getDrama());
 					}
 				}
-			} else if (selectNumber == 0) {
+			} else if (selectNumber == 3) {
+				for (WatchDTO w : watchingList) {
+					if (w.getDrama() != null) {
+						System.out.println(w);
+					}
+				}
+			}
+
+			else if (selectNumber == 0) {
 				run = false;
 			}
 		}
@@ -178,7 +186,8 @@ public class WatchService {
 		String clientPass = scan.next();
 		LocalDateTime dateTime = LocalDateTime.now();
 		String clientCreatedDate = dateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-		String clientExpireDate = dateTime.plusMonths(1).minusDays(1).format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+		String clientExpireDate = dateTime.plusMonths(1).minusDays(1)
+				.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
 
 		boolean confirmDate = wr.date(clientId, clientPass);
 		if (confirmDate) {

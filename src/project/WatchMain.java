@@ -1,10 +1,16 @@
 package project;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class WatchMain {
 
 	public static void main(String[] args) {
+		
+	    ArrayList<String> list = new ArrayList<>();
+	    list.add("티스토리");
+		list.add("dd");
+		
 		Scanner scan = new Scanner(System.in);
 		boolean run = true;
 		int selectNumber = 0;
