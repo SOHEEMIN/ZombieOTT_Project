@@ -137,7 +137,7 @@ public class WatchService {
 		List<WatchDTO> watchingList = wr.watchList(cliendId);
 		while (run && checkClientId(cliendId)) {
 			System.out.println("--------------------------------------------------------");
-			System.out.println("1. 영화 시청내역 | 2. 드라마 시청내역 | *0번: 처음으로 돌아가기| 3번 전체조회");
+			System.out.println("1. 영화 시청내역 | 2. 드라마 시청내역 | *0번: 처음으로 돌아가기");
 			System.out.println("--------------------------------------------------------");
 			System.out.println("선택>");
 			selectNumber = scan.nextInt();
