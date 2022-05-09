@@ -8,14 +8,15 @@ public class WatchDTO {
 
 	private String movie;
 	private String drama;
+	private String clientId;
 
 	WatchDTO() {
-
 	}
 
-	public WatchDTO(String movie, String drama) {
+	public WatchDTO(String movie, String drama, String clientId) {
 		this.movie = movie;
 		this.drama = drama;
+		this.clientId = clientId;
 	}
 
 	public String getMovie() {
@@ -34,9 +35,17 @@ public class WatchDTO {
 		this.drama = drama;
 	}
 
+	public String getClientId() {
+		return clientId;
+	}
+
+	public void setClientId(String clientId) {
+		this.clientId = clientId;
+	}
+
 	@Override
 	public String toString() {
-		return "WatchDTO [movie=" + movie + ", drama=" + drama + "]";
+		return "WatchDTO [movie=" + movie + ", drama=" + drama + ", clientId=" + clientId + "]";
 	}
 
 }
