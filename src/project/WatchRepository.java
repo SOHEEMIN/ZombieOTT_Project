@@ -114,7 +114,7 @@ public class WatchRepository {
 		return result;
 	}
 
-	public boolean date(String clientId, String clientPass, String clientCreatedDate) {
+	public boolean date(String clientId, String clientPass) {
 		boolean result = false;
 		for (int i = 0; i < clientList.size(); i++) {
 			if (clientId.equals(clientList.get(i).getClientId())

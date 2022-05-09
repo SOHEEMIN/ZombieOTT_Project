@@ -178,9 +178,9 @@ public class WatchService {
 		String clientPass = scan.next();
 		LocalDateTime dateTime = LocalDateTime.now();
 		String clientCreatedDate = dateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-		String clientExpireDate = dateTime.plusMonths(1).format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+		String clientExpireDate = dateTime.plusMonths(1).minusDays(1).format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
 
-		boolean confirmDate = wr.date(clientId, clientPass, clientCreatedDate);
+		boolean confirmDate = wr.date(clientId, clientPass);
 		if (confirmDate) {
 			ClientDTO post = wr.findById(id);
 			System.out.println(post);
