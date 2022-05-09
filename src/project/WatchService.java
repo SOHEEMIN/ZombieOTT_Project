@@ -153,15 +153,7 @@ public class WatchService {
 						System.out.println(w.getDrama());
 					}
 				}
-			} else if (selectNumber == 3) {
-				for (WatchDTO w : watchingList) {
-					if (w.getDrama() != null) {
-						System.out.println(w);
-					}
-				}
-			}
-
-			else if (selectNumber == 0) {
+			} else if (selectNumber == 0) {
 				run = false;
 			}
 		}
@@ -189,7 +181,7 @@ public class WatchService {
 		String clientExpireDate = dateTime.plusMonths(1).minusDays(1)
 				.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
 
-		boolean confirmDate = wr.date(clientId, clientPass);
+		boolean confirmDate = wr.login(clientId, clientPass);
 		if (confirmDate) {
 			ClientDTO post = wr.findById(id);
 			System.out.println(post);

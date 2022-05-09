@@ -57,7 +57,7 @@ public class WatchRepository {
 					clientList.get(j).setWatchList(selectMovie);
 					WatchDTO watchPlus = new WatchDTO(selectMovie, selectDrama, clientId);
 					watchtList.add(watchPlus);
-					//System.out.println(watchtList);
+					// System.out.println(watchtList);
 					result = true;
 				}
 			}
@@ -65,6 +65,7 @@ public class WatchRepository {
 
 		return result;
 	}
+
 	public boolean kindOfDrama(String selectMovie, String selectDrama, String clientId) {
 		boolean result = false;
 		for (int z = 0; z <= dramaArray1[z].length(); z++) {
@@ -73,7 +74,7 @@ public class WatchRepository {
 					clientList.get(j).setWatchList(selectDrama);
 					WatchDTO watchPlus = new WatchDTO(selectMovie, selectDrama, clientId);
 					watchtList.add(watchPlus);
-					//System.out.println(watchtList);
+					// System.out.println(watchtList);
 					result = true;
 				}
 			}
@@ -102,6 +103,7 @@ public class WatchRepository {
 		}
 		return list;
 	}
+
 	public boolean recommend(String clientId) {
 		boolean result = false;
 		Random rand = new Random();
@@ -114,14 +116,4 @@ public class WatchRepository {
 		return result;
 	}
 
-	public boolean date(String clientId, String clientPass) {
-		boolean result = false;
-		for (int i = 0; i < clientList.size(); i++) {
-			if (clientId.equals(clientList.get(i).getClientId())
-					&& clientPass.equals(clientList.get(i).getClientPass())) {
-				result = true;
-			}
-		}
-		return result;
-	}
 }
