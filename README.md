@@ -31,7 +31,7 @@
             2. 로그인
             3. 메뉴보기
             4. 시청내역
-            5. 시청내역
+            5. 추천받기
             6. 멤버십 내역확인
         2. 모든 고객의 데이터는 WatchDTORepository의 clientList에 저장되고 관리된다.
             1. clientList는 static으로 선언하도록 한다.
